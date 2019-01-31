@@ -350,17 +350,30 @@ template {
   display: none;
 }
 
+html,
 body {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  width: 100vw;
   height: 100vh;
+  background: url('./background.jpg') center top/cover no-repeat fixed;
+  text-align: center;
+  overflow: hidden;
 }
 
 h1 {
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
-  font-size: 1.7vw;
+  font-size: 3.125em;
   margin: 0;
+  margin-top: 4.4em;
+}
+
+@media (max-width: 360px) {
+  body {
+    font-size: 14px;
+  }
 }
