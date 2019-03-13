@@ -379,8 +379,8 @@ div {
 h1 {
   font-weight: 600;
   font-size: 1.625em;
-  margin-left: 5px;
   margin: 0;
+  margin-left: 5px;
   margin-bottom: 70px;
   width: 469px;
 }
@@ -455,6 +455,7 @@ button:focus {
 p {
   font-size: 0.875em;
   width: 464px;
+  margin-left: 5px;
 }
 
 p span {
@@ -528,6 +529,10 @@ img {
 
     input {
       width: 100%;
+    }
+
+    input:focus {
+      width: calc(100% + 5px);
     }
 
     img {
