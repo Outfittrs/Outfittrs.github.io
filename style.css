@@ -409,9 +409,10 @@ input {
   color: #000;
   font-weight: 600;
   margin-left: 5px;
+  border-radius: 0;
 }
 
-label span {
+label span:first-of-type {
   position: absolute;
   top: -8px;
   left: 25px;
@@ -431,15 +432,19 @@ label span {
 
 input:focus {
   outline: none;
-  border-left: 5px solid #000;
-  margin-left: 0;
-  padding-left: 21px;
-  width: 469px;
-  left: 25px;
 }
 
-input:focus + span,
-input:not(:placeholder-shown) + span {
+input:focus ~ span:last-child {
+  position: absolute;
+  left: 1px;
+  top: -38px;
+  width: 5px;
+  height: 74px;
+  background: #000;
+}
+
+input:focus + span:first-of-type,
+input:not(:placeholder-shown) + span:first-of-type {
   top: -22px;
   font-size: 0.875em;
 }
